@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+:root {
+    --navbar-height: 55px ;
+    --card-image-height: 450px;
+    --card-image-width: 372px;
+}
+
+.container{
+    width: 1200px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.navbar{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     width: 100%;
+    height: var(--navbar-height);
+   
+}
+/* .logo img{
+    width: 128.34px;
+    height: 55px;
+} */
+.nav-menu{
+    width: 689.17px;
+    height: 24px;
+    gap: 50px;
+}
+.navbar .nav-menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .nav-menu ul li a{
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none; 
+    transition: color 0.4s; 
+}
+
+.nav-menu ul li a:hover {
+    color: white;
+    border-bottom: 2px solid white; 
+}
+
+
+/* .logo{
+    width: 128.34px;
+    height: 55px;
+} */
+.hero{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://s3-alpha-sig.figma.com/img/327b/f505/8d79621539e9e91a025b74a76b906ddd?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XcmC1PDNvzKqOsToK8wMBW2xfGLE1dS-q9jI2XB22YAXaWuHgUM081RXi29onExfaEieuYHCcsibs09~~vM-HdrJAUsipWCIUjJfZ6IK82jDArOw6OBy1SY8x9duGqbGaBbbQBo7VhOgleNHPDf~iDnFY~8FqEekuy--h0jfC0MCDgO5-fZX5J0QzXhKVmK2~kQrb5hHyhhSB7RzZH2EODQDfS5Lqm60fe1kh50bTxFOrj67bBguuTl72Y6yXjqBxGjn~uBfJKDfxc~XE4E0vkgrhOrnvtZ-5SlAHpDYh1GWilPFsVqhonR2EhMkF-Ne8UiVH5ZK0J-tI3LOhtXV1Q__'); 
+    background-size: cover; 
+    height: 100vh;
+    width: 100%;
+}
+
+.hero-text{
+    width: 754px;
+    height: 382px;
+    float: left;
+    margin-top: calc(232px - var(--navbar-height)) ;
+}
+
+.hero-text h1{
+    font-family: "Playfair Display", serif;
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 95.98px;
+}
+
+.hero-text p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+.hero-text p, button{
+margin-top: 30px;
+}
+.hero-text button{
+    width: 174px;
+    height: 52px;
+    background-color: #006CB6;
+    padding: 16px, 36px, 16px, 36px;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+}
+
+.services{
+    height: 100vh;
+    width: 100%;
+
+}
+
+.services h1{
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 95.98px;
+    text-align: center;
+}
+
+.services .cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.services .cards .card{
+    width: var(--card-image-width);
+    height: var(--card-image-height);
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    
+}
+.services .cards .card ::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 108, 182, 0.3) 0%, rgba(0, 108, 182, 0.3) 100%);
+   
+}
+
+.services .cards .card:hover ::before {
+    background: none;
+    content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+  background-color: #006CB6;
+  animation: slide-up 0.5s ease forwards; 
+  
+}
+
+
+
+@keyframes slide-up {
+    0% {
+        width: 322px; 
+        height: 0; 
+    }
+    100% {
+        width: 322px; 
+        height: 300px; 
+    }
+}
+.card img {
+    transform: scale(1);
+    transition: transform 0.3s ease; 
+}
+
+.card:hover img {
+    transform: scale(1.1); 
+}
+/* 
+.card-content{
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.card-content h3{
+    color: #006CB6;
+} */
+
